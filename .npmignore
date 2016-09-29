@@ -1,0 +1,12 @@
+.editorconfig
+.eslintignore
+.eslintrc
+.eslintcache
+.gitattributes
+.githooks/
+.gitignore
+.travis.yml
+.npmignore
+.nvmrc
+test/
+test.sh

@@ -1,0 +1,73 @@
+{
+  "name": "screenshotron",
+  "version": "0.1.0",
+  "description": "The most aptly-named way to take screenshots of pages with Electron",
+  "author": "Thibaud Colas <thib@thib.me> (https://github.com/thibaudcolas)",
+  "license": "ISC",
+  "homepage": "https://github.com/springload/screenshotron#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/springload/screenshotron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/springload/screenshotron/issues"
+  },
+  "keywords": [
+    "browser",
+    "screenshot",
+    "screencap",
+    "capture",
+    "ci",
+    "qa",
+    "nightmare",
+    "phantom",
+    "slimer",
+    "electron",
+    "website",
+    "webpage",
+    "ip",
+    "live",
+    "running"
+  ],
+  "engines": {
+    "node": ">=4.0"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "screenshotron": "./index.js"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.0.16",
+    "easydate": "^2.1.0",
+    "filenamify-url": "^1.0.0",
+    "got": "^5.1.0",
+    "lodash.template": "^4.4.0",
+    "log-symbols": "^1.0.2",
+    "meow": "^3.4.2",
+    "nightmare": "^2.7.0",
+    "normalize-url": "^1.3.1",
+    "plur": "^2.1.2",
+    "vo": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.1.1",
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-preset-es2015": "^6.0.15",
+    "chai": "^3.3.0",
+    "eslint": "^1.8.0",
+    "eslint-config-airbnb": "^0.1.1",
+    "mocha": "^2.3.3",
+    "rollup": "^0.20.5"
+  },
+  "scripts": {
+    "lint": "eslint --cache .",
+    "pretest": "npm run lint -s",
+    "test:output": "./test.sh",
+    "test:unit": "mocha --compilers js:babel-core/register -- test/*.spec.js",
+    "test": "npm run build -s && npm run test:unit -s && npm run test:output -s",
+    "prepublish": "npm run build -s",
+    "build": "rollup cli.js > tmp.js && babel tmp.js > es5-bundle.js && rm -rf tmp.js",
+    "start": "node index.js"
+  }
+}

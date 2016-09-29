@@ -1,0 +1,28 @@
+sudo: false
+language: node_js
+node_js:
+- 4
+- node
+install:
+- npm install
+before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- sleep 3
+script:
+- npm run test
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: LBRVYIsuBAb+EkS0RQGHuWlyR1GUv7ufiTF2F4CtZAFs6Z9mXUXs7Z2bCzpQdRIRdqyR6HLZdh8FyaWqFYiS8z3Dhu9wY3u0hMlSvFRk9ryaVJoqVDz5NLZa0VVbxmXs5iLHVYweKEoE/0eDQuo3AQ+LYjzDPT4daAPRBAwGQAvtwX69aivT1Aii1cXUN71hZA9SJ7CqXOqbQmDCP6p9jTbiv7SnF6OWZPwB4nAquBMgP8Q4VuhnE8kfzZrqmRsHF6qmt1hKzGU7fvvKBkaNPFlEuoqfczHDEEowNXPE/64MMRcn8lzNw/66yFgbgJ7Xe+61gwdmcmoeSK2+qYRkMH6c3HWFFgPbQfjrR+h60f3s8AFlUPSN+H26yduHOhhEEw4sEHBaROktb3QBBd9aC6ebPFhX5fxbRmNe2BEVAs8MBE0JQp+VS44U7LTak2zTwFPrcBExVeVCjZ0vzEM09jH64MpiUgerTFfioCpMpjIn/+y0F3uylKY/b3T5WERbYCtKaxbU1K2zifuvvA5EbjzpZd1wNt4D9CvOgqjIa8G2Jmz44wlTbEBWvXGMTfKEtWdFPXqM5hyPmyVLyGFfUOP7pFZ4RxAuiP6NEM7TKGI8J50mm+CozUONRoyGbSzL+wKfhd7ld8OWRXM+X9YiIzYwowhAVdzXejwe4Shb7qU=
+on_failure: always
+deploy:
+  provider: npm
+  email: thibaudcolas@gmail.com
+  api_key:
+    secure: Z6dUgVYQYaPFI+xP7+7TXh2VBZwO5JnlUbVv6YyP7DsCtqqDnOubDQFyQnwpjP9KuWjSbAul0Y7qKgwtqcKTQfTopEdaGaGAZ/hswo8AL6sIha153Adig6TBDbxfJ89dNDTyFh1z5hJnD5SqrkvFsVi/pEZUe06aYPm7NTrnf1eKXDqawwZOiIaslr4wRshW4Es2r0NNfiH2PU4KGPoA3N0PNh7CXdJq7tizztCBwLha/CfU9UDFQu6Dw4z5yYGsZXU1HTRFqNArqfqN76bcpaENL0uS43VE3n6LdGY2pR3Kn6A80c/ejgNGP5O0SpvNhSK9Ezd5465yP5S1n8AhBYZZmR/k5OUEavx3LGDsQt78fQ0HgnZH+hjBGpd2BVS8QW0xO+DSc5XtZCQnm7q1Oxhumf5fivmTjYbYhuxHeXmnQuelO9CCzNE6DR0cNDDtPMTo+b7t5lxjMTGdz9JiXZKL6fwDhMAZIXcOZjQKCLPtgnSMuACEdgHgDUOFMx8gi6m+Y8NVTNDiqbDtI2CkV+VloAeD88cmLv9meRcwYa0hU2UjW7jTOX52U+Hvo876+RU0rTjxXafiduOfmADt5rmNnoNcY9+/cA8S8YfnuEY/cYlb8PWXqGmA2f0awCm470tD1QnMZZF3Qyvi4oeo1yj2AcaOJ4qM1MPKi4yEtmk=
+  on:
+    tags: true
+    repo: springload/screenshotron
+  skip_cleanup: true
