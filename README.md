@@ -84,3 +84,5 @@ Here are common pitfalls of automated screenshot taking:
 - Animations that execute on page load (carousels)
 - Modals, overlays, and interstitials
 - EU-law cookie messages
+
+To research: https://github.com/NullCrayfish/CookiesOK
