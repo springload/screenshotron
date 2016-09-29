@@ -1,7 +1,7 @@
 screenshotron [![npm](https://img.shields.io/npm/v/screenshotron.svg?style=flat-square)](https://www.npmjs.com/package/screenshotron) [![Build Status](https://img.shields.io/travis/springload/screenshotron.svg?style=flat-square)](https://travis-ci.org/springload/screenshotron) [![dependency Status](https://img.shields.io/david/springload/screenshotron.svg?style=flat-square)](https://david-dm.org/springload/screenshotron) [![devDependency Status](https://img.shields.io/david/dev/springload/screenshotron.svg?style=flat-square)](https://david-dm.org/springload/screenshotron)
 ==========
 
-> The most aptly-named way to take screenshots of pages with Electron.
+> The most aptly-named way to take screenshots of pages with [Electron](http://electron.atom.io/).
 
 ## Installation
 
@@ -52,3 +52,14 @@ git push origin master
 git push --tags
 npm publish
 ```
+
+## Resources on automated screenshot taking
+
+- Nightmare screenshots implementation https://github.com/segmentio/nightmare/blob/master/lib/runner.js#L416
+- Pageres https://github.com/sindresorhus/pageres/, https://github.com/kevva/screenshot-stream
+- Electron screenshot https://github.com/electron/electron/blob/master/docs/api/browser-window.md#wincapturepagerect-callback, https://gist.github.com/twolfson/0d374d9d7f26eefe7d38
+- https://github.com/FWeinb/electron-screenshot-app
+- https://github.com/FWeinb/electron-screenshot-service
+- https://github.com/JamesKyburz/electron-screenshot
+
+Code originally taken from https://github.com/thibaudcolas/is-js-error, and https://github.com/sindresorhus/pageres/
