@@ -72,6 +72,7 @@ I have had issues with the screenshots taken by Phantom (via [pageres](https://g
 - https://github.com/FWeinb/electron-screenshot-app
 - https://github.com/FWeinb/electron-screenshot-service
 - https://github.com/JamesKyburz/electron-screenshot
+- https://github.com/victorferraz/break-shot
 
 Code originally taken from https://github.com/thibaudcolas/is-js-error, and https://github.com/sindresorhus/pageres/
 
