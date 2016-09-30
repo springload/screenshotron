@@ -53,10 +53,19 @@ git push --tags
 npm publish
 ```
 
-## Resources on automated screenshot taking
+## Automated screenshot taking
+
+To take screenshots of web pages, you need to display the pages inside a browser. To do reliably and at large scales, you need the navigation to the site and dimensioning of the viewport to be automated. You need an automated (headless?) browser.
+
+The best automated browsers are:
+
+- [PhantomJS](http://phantomjs.org/) (WebKit, engine of Safari, headless).
+- [SlimerJS](https://slimerjs.org/) (Gecko, engine of Firefox, not truly headless yet).
+- [Electron](http://electron.atom.io/) (Chromium/Blink, engine of Chrome, not truly headless?).
+
+I have had issues with the screenshots taken by Phantom (via [pageres](https://github.com/sindresorhus/pageres/), via [screenshot-stream](https://github.com/kevva/screenshot-stream)), and SlimerJS ([homemade](https://github.com/springload/madewithwagtail/blob/c4a6e16b0196e794cd807709b5a00da807181039/scripts/slimerjs-screenshot.js)), so it is now time to try Electron.
 
 - Nightmare screenshots implementation https://github.com/segmentio/nightmare/blob/master/lib/runner.js#L416
-- Pageres https://github.com/sindresorhus/pageres/, https://github.com/kevva/screenshot-stream
 - Electron screenshot https://github.com/electron/electron/blob/master/docs/api/browser-window.md#wincapturepagerect-callback, https://gist.github.com/twolfson/0d374d9d7f26eefe7d38
 - https://github.com/FWeinb/electron-screenshot-app
 - https://github.com/FWeinb/electron-screenshot-service
