@@ -3,6 +3,8 @@ screenshotron [![npm](https://img.shields.io/npm/v/screenshotron.svg?style=flat-
 
 > The most aptly-named way to take screenshots of pages with [Electron](http://electron.atom.io/).
 
+:warning: This is alpha software, no matter which tool you are using always check the screenshots yourself.
+
 ## Installation
 
 Requires Node 4+. From the command line, run
@@ -72,3 +74,12 @@ I have had issues with the screenshots taken by Phantom (via [pageres](https://g
 - https://github.com/JamesKyburz/electron-screenshot
 
 Code originally taken from https://github.com/thibaudcolas/is-js-error, and https://github.com/sindresorhus/pageres/
+
+Here are common pitfalls of automated screenshot taking:
+
+- Web fonts support and loading
+- HTTPS or mixed-source support
+- Images loading
+- Animations that execute on page load (carousels)
+- Modals, overlays, and interstitials
+- EU-law cookie messages
