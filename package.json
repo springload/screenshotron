@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "The most aptly-named way to take screenshots of pages with Electron",
   "author": "Thibaud Colas <thib@thib.me> (https://github.com/thibaudcolas)",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/springload/screenshotron#readme",
   "repository": {
     "type": "git",
@@ -24,13 +24,10 @@
     "slimer",
     "electron",
     "website",
-    "webpage",
-    "ip",
-    "live",
-    "running"
+    "webpage"
   ],
   "engines": {
-    "node": ">=4.0"
+    "node": ">=6.0"
   },
   "preferGlobal": true,
   "bin": {
