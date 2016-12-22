@@ -17,6 +17,7 @@ const cli = meow(`
       --help,      Display this help
       --version,   Display the version number
       --delay [ms], Wait for a given period before taking a screenshot.
+      --size [widthxheight], Configure screenshot size. Default: 1440x1200
 `);
 
 if (cli.input.length === 0) {
@@ -25,9 +26,10 @@ if (cli.input.length === 0) {
 }
 
 const urls = cli.input.map(parseURL);
+const size = cli.flags.size ? cli.flags.size : '1440x1200';
 const delay = cli.flags.delay ? Math.max(parseInt(cli.flags.delay, 10), 1) : 1;
 
-takeScreenshot(urls, delay, (err, results) => {
+takeScreenshot(urls, delay, size, (err, results) => {
     if (err) {
         console.log(`${logSymbols.warning} ${err}`);
         process.exit(1);
