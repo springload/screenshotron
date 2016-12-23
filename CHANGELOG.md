@@ -3,17 +3,25 @@
 > All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [[0.2.0]](https://github.com/springload/screenshotron/releases/tag/0.2.0) - 2016-12-23
 
-## TODO [[1.0.0]](https://github.com/thibaudcolas/screenshotron/releases/tag/1.0.0) - 2015-XX-XX
+### Added
 
-First stable release!
+- Allow configuration of screenshot size with `--size` flag
+- Use sharp to resize images, make sure they are 1x
+- Always hide the browser scrollbar
+- Attempt to hide EU cookie law prompts
 
-## Changes
+### Changed
 
-- [start...1.0.0](https://github.com/thibaudcolas/screenshotron/compare/3751e465af44f402ba7018a252fc9c3049830d86...1.0.0)
+- Require node 6 for screenshotron to work
+- Tweak Electron configuration so it is more lightweight
 
-## [[x.y.z]](https://github.com/thibaudcolas/screenshotron/releases/tag/x.y.z) - YYYY-MM-DD (Template: http://keepachangelog.com/)
+## [[0.1.0]](https://github.com/springload/screenshotron/releases/tag/0.1.0) - 2016-09-29
+
+First usable release!
+
+## [[x.y.z]](https://github.com/springload/screenshotron/releases/tag/x.y.z) - YYYY-MM-DD (Template: http://keepachangelog.com/)
 
 ### Added
 

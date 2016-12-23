@@ -7,7 +7,7 @@ screenshotron [![npm](https://img.shields.io/npm/v/screenshotron.svg?style=flat-
 
 ## Installation
 
-Requires Node 4+. From the command line, run
+Requires Node 6+. From the command line, run
 
 ```sh
 npm install -g screenshotron
