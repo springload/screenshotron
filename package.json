@@ -1,6 +1,6 @@
 {
   "name": "screenshotron",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The most aptly-named way to take screenshots of pages with Electron",
   "author": "Thibaud Colas <thib@thib.me> (https://github.com/thibaudcolas)",
   "license": "MIT",

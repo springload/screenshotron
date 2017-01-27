@@ -3,6 +3,12 @@
 > All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [[0.3.0]](https://github.com/springload/screenshotron/releases/tag/0.3.0) - 2017-01-27
+
+### Added
+
+- Introduce manual mode to allow interaction with the page before screenshotting
+
 ## [[0.2.0]](https://github.com/springload/screenshotron/releases/tag/0.2.0) - 2016-12-23
 
 ### Added
